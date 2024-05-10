@@ -1,3 +1,7 @@
+## Myself
+
+I had 20/20 at the Arithmetic for IT project. Here is my code. I am not held responsible for the usage of my repository (any flag-triche).
+
 # AFIT
 
 The AFIT (Standing for *Arithmetic for IT*) project has for for aim to
