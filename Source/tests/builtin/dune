@@ -1,0 +1,55 @@
+(library
+    (name test_builtin)
+    (modules test_builtin)
+    (libraries alcotest test_tools builtin))
+
+(library
+    (name test_builtin_basic_arithmetics)
+    (modules test_builtin_basic_arithmetics)
+    (libraries alcotest test_tools basic_arithmetics))
+
+(library
+    (name test_builtin_power)
+    (modules test_builtin_power)
+    (libraries alcotest test_tools power))
+
+(library
+    (name test_builtin_test_primes)
+    (modules test_builtin_test_primes)
+    (libraries alcotest test_tools test_primes))
+
+(library
+    (name test_builtin_generate_primes)
+    (modules test_builtin_generate_primes)
+    (libraries alcotest test_tools test_primes generate_primes))
+
+(library
+    (name test_builtin_encoding_msg)
+    (modules test_builtin_encoding_msg)
+    (libraries alcotest test_tools encoding_msg))
+
+(library
+    (name test_builtin_ciphers)
+    (modules test_builtin_ciphers)
+    (libraries alcotest test_tools builtin ciphers))
+
+(library
+    (name test_builtin_break_ciphers)
+    (modules test_builtin_break_ciphers)
+    (libraries alcotest test_tools break_ciphers))
+
+(test
+	(name run_tests)
+	(modules run_tests)
+	(libraries alcotest junit junit_alcotest
+	 test_builtin test_builtin_basic_arithmetics
+    	 test_builtin_power test_builtin_test_primes
+    	 test_builtin_generate_primes test_builtin_encoding_msg
+    	 test_builtin_ciphers test_builtin_break_ciphers)
+	 (action (run %{test} --color=always)))
+
+(env
+  (dev
+    (flags (:standard -g -w -27-33-32-39)))
+  (release
+    (flags (:standard -O3))))

@@ -1,0 +1,1 @@
+[33mASSERT[0m el_gamal functions: keys generated with p=100000007, message 42 is encrypted and then decrypted, we check if the result is equal to the original message

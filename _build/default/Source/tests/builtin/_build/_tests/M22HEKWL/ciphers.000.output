@@ -1,0 +1,4 @@
+[33mASSERT[0m encrypt_cesar: key: 2, word: [2, 3, 6], base: 10
+[33mASSERT[0m encrypt_cesar: key: 0, word: [104, 101, 108, 108, 111], base: 255
+[33mASSERT[0m encrypt_cesar: key: 2, word: [65, 66, 67], base: 255
+[33mASSERT[0m encrypt_cesar: key: -1, word: [120, 121, 122], base: 255

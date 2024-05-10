@@ -1,0 +1,8 @@
+[33mASSERT[0m is_pseudo_prime: 2 with [2, 4, 8, 12]
+[33mASSERT[0m is_pseudo_prime: 11 with [2, 4, 5, 20]
+[33mASSERT[0m is_pseudo_prime: 23 with [2, 9, 15, 18]
+[33mASSERT[0m is_pseudo_prime: 29 with [30, 41, 52]
+[33mASSERT[0m is_pseudo_prime: 4 with [2, 9, 15, 18]
+[33mASSERT[0m is_pseudo_prime: 22 with [30, 41, 52]
+[33mASSERT[0m is_pseudo_prime: 15 with [2, 9, 15, 18]
+[33mASSERT[0m is_pseudo_prime: 27 with [30, 41, 52]

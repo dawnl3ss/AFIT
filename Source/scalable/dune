@@ -1,0 +1,44 @@
+(library
+  (name scalable)
+  (modules scalable))
+
+(library
+  (name scalable_basic_arithmetics)
+  (modules scalable_basic_arithmetics)
+  (libraries scalable))
+
+(library
+  (name scalable_power)
+  (modules scalable_power)
+  (libraries scalable scalable_basic_arithmetics))
+
+(library
+  (name scalable_generate_primes)
+  (modules scalable_generate_primes)
+  (libraries scalable scalable_basic_arithmetics))
+
+(library
+  (name scalable_test_primes)
+  (modules scalable_test_primes)
+  (libraries scalable scalable_power))
+
+(library
+  (name scalable_encoding_msg)
+  (modules scalable_encoding_msg)
+  (libraries scalable scalable_power))
+
+(library
+  (name scalable_ciphers)
+  (modules scalable_ciphers)
+  (libraries scalable scalable_power))
+
+(library
+  (name scalable_break_ciphers)
+  (modules scalable_break_ciphers)
+  (libraries scalable scalable_basic_arithmetics))
+
+(env
+  (dev
+    (flags (:standard -g -w -27-33-32-39)))
+  (release
+    (flags (:standard -O3))))

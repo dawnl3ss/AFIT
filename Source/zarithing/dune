@@ -1,0 +1,35 @@
+(library
+  (name z_power)
+  (modules z_power)
+  (libraries zarith))
+
+(library
+  (name z_generate_primes)
+  (modules z_generate_primes)
+  (libraries zarith))
+
+(library
+  (name z_test_primes)
+  (modules z_test_primes)
+  (libraries z_power zarith))
+
+(library
+  (name z_encoding_msg)
+  (modules z_encoding_msg)
+  (libraries z_power zarith))
+
+(library
+  (name z_ciphers)
+  (modules z_ciphers)
+  (libraries z_power zarith))
+
+(library
+  (name z_break_ciphers)
+  (modules z_break_ciphers)
+  (libraries zarith))
+
+(env
+  (dev
+    (flags (:standard -g -w -27-33-32-39)))
+  (release
+    (flags (:standard -O3))))

@@ -1,0 +1,55 @@
+(library
+    (name test_scalable)
+    (modules test_scalable)
+    (libraries alcotest test_tools scalable))
+
+(library
+    (name test_scalable_basic_arithmetics)
+    (modules test_scalable_basic_arithmetics)
+    (libraries alcotest test_tools scalable scalable_basic_arithmetics))
+
+(library
+    (name test_scalable_power)
+    (modules test_scalable_power)
+    (libraries alcotest test_tools scalable scalable_power))
+
+(library
+    (name test_scalable_test_primes)
+    (modules test_scalable_test_primes)
+    (libraries alcotest test_tools scalable scalable_test_primes))
+
+(library
+    (name test_scalable_generate_primes)
+    (modules test_scalable_generate_primes)
+    (libraries alcotest test_tools scalable scalable_test_primes scalable_generate_primes))
+
+(library
+    (name test_scalable_encoding_msg)
+    (modules test_scalable_encoding_msg)
+    (libraries alcotest test_tools scalable scalable_encoding_msg))
+
+(library
+    (name test_scalable_ciphers)
+    (modules test_scalable_ciphers)
+    (libraries alcotest test_tools scalable scalable_test_primes scalable_ciphers))
+
+(library
+    (name test_scalable_break_ciphers)
+    (modules test_scalable_break_ciphers)
+    (libraries alcotest test_tools scalable scalable_break_ciphers))
+
+(test
+	(name run_tests)
+	(modules run_tests)
+	(libraries alcotest junit junit_alcotest
+	 test_scalable test_scalable_basic_arithmetics
+	 test_scalable_power test_scalable_test_primes
+	 test_scalable_generate_primes test_scalable_encoding_msg
+	 test_scalable_ciphers test_scalable_break_ciphers)
+	 (action (run %{test} --color=always)))
+
+(env
+  (dev
+    (flags (:standard -g -w -27-33-32-39)))
+  (release
+    (flags (:standard -O3))))

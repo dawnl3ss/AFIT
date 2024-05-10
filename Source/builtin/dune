@@ -1,0 +1,49 @@
+(library
+  (name builtin)
+  (modules builtin))
+
+(library
+  (name basic_arithmetics)
+  (modules basic_arithmetics)
+  (libraries builtin))
+
+(library
+  (name power)
+  (modules power)
+  (libraries builtin basic_arithmetics))
+
+(library
+  (name generate_primes)
+  (modules generate_primes)
+  (libraries builtin basic_arithmetics))
+
+(library
+  (name test_primes)
+  (modules test_primes)
+  (libraries builtin power))
+
+(library
+  (name encoding_msg)
+  (modules encoding_msg)
+  (libraries builtin power))
+
+(library
+  (name ciphers)
+  (modules ciphers)
+  (libraries builtin power))
+
+(library
+  (name break_ciphers)
+  (modules break_ciphers)
+  (libraries builtin basic_arithmetics))
+
+(library
+  (name chinese_remaindert)
+  (modules chinese_remaindert)
+  (libraries builtin basic_arithmetics))
+
+(env
+  (dev
+    (flags (:standard -g -w -27-33-32-39)))
+  (release
+    (flags (:standard -O3))))
